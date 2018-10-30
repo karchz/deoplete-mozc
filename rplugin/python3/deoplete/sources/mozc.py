@@ -39,6 +39,9 @@ class Mozc:
         if key == '"':
             key = 34
 
+        if key == ';':
+            key = 59
+
         oobj = self.communicate('SendKey', "{0} {1}".format(self.__session_id, key))
         # if key == 'backspace':
         #     self.__input = self.__input[:-1]
